@@ -24,6 +24,7 @@ html {
     font-family: var(--maiNfontF);
     font-size: var(--baseFontSize);
     font-weight: var(--mainFontWeigth);
+
 }
 
 /* reusable componentsP*/
@@ -51,6 +52,8 @@ header {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+
 }
 
 h1,
@@ -105,6 +108,7 @@ h3 {
 /*---------buttons--------*/
 
 .btn:link,
+input[type=submit],
 .btn:visited {
     display: inline-block;
     padding: 10px 30px;
@@ -116,6 +120,7 @@ h3 {
 }
 
 .btn-full:link,
+input[type=submit],
 .btn-full:visited {
     background-color: var(--btnColor);
     border: 1px solid var(--btnColor);
@@ -129,6 +134,8 @@ h3 {
 }
 
 .btn:active,
+input[type=submit]:hover,
+input[type=submit]:active,
 .btn:hover {
     background-color: #a15512;
 }
@@ -281,13 +288,14 @@ a:hover {
     margin-top: 30px;
 }
 
-.steps-box:nth-child(1) {
+.steps-box:first-child {
     text-align: right;
     padding-right: 3%;
     margin-top: 30px;
 }
 
-.steps-box:nth-child(2) {
+.steps-box:last-child {
+    text-align: left;
     padding-left: 3%;
     margin-top: 70px;
 }
@@ -321,13 +329,14 @@ a:hover {
 .btn-app img {
     width: auto;
     height: 50px;
-    margin: 10px;
+    margin-right: 10px;
 }
 
 
 .btn-app:link,
-.btn-app:link {
+.btn-app:visited {
     border: 0;
+
 }
 
 /*---------------------------- */
@@ -340,4 +349,164 @@ a:hover {
 
 .city-feature {
     margin-bottom: 5px;
+}
+
+/*---------------------------- */
+/* customers Testimonials*/
+/*-----------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/resources/img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 3%;
+    font-style: italic;
+    line-height: 140%;
+    position: relative;
+    margin-top: 1.7rem;
+}
+
+
+blockquote::before {
+    content: "\201c";
+    font-size: 4rem;
+    font-weight: bold;
+    position: absolute;
+    ;
+    display: block;
+
+}
+
+cite {
+    text-align: center;
+    font-size: 90%;
+    padding-top: 1.5rem;
+    display: block;
+}
+
+cite img {
+    height: 3.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/*---------------------------- */
+/* plans*/
+/*-----------------------------*/
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color: var(--bgColor);
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 2px 4px 2px #e3e3e3;
+
+}
+
+.plan-box div {
+    padding: 1rem;
+    border-bottom: 1px solid #e8e8e8e8;
+}
+
+.plan-price {
+    color: var(--btnColor);
+}
+
+.plan-price span {
+    font-size: 250%;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    color: var(--btnColor);
+}
+
+.plan-box div:first-child {
+    background-color: #e9e9e9;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+/*---------------------------- */
+/* contact form*/
+/*-----------------------------*/
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 0.7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+/*---------------------------- */
+/* footer*/
+/*-----------------------------*/
+
+footer {
+    background-color: #333;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 10px;
+    margin-left: 20px;
+    grid-gap: 50px;
+}
+
+.footer-nav li a {
+    border-bottom: none;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-style: oblique;
+    letter-spacing: 5px;
+    line-height: 10px;
+}
+
+.social-icons {
+    list-style: none;
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-top: 10px;
+    margin-right: 20px;
+}
+
+.social-icons a {
+    border-bottom: none;
+    font-size: 1.5rem;
+}
+
+footer p {
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 0.9rem;
+    margin-right: 10px;
 }
