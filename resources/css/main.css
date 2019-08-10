@@ -314,7 +314,7 @@ a:hover {
 
 .works-step div {
     color: var(--btnColor);
-    display: inline-block;
+    display: block;
     border: 2px solid var(--btnColor);
     border-radius: 50%;
     width: 50px;
